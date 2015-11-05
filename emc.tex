@@ -50,15 +50,35 @@ currently, this is communicated by stickers on the books with a grey sticker on
 the spine of a book meaning one is not to take that book out of the library.
 Other colour stickers of books' spines mean one can check them out.
 
-When a student checks out a book, they write their name in a log book, along
-with the current date. Upon returning the book, they find the entry in the log
-book corresponding to its checking out and add the date they returned it. If one
-wishes to find out who has a book or, indeed, whether a book is currently in the
-library (without visually searching the shelves), one must read through this log
-book, find the lastest entry regarding the book one wishes to know about and see
-who checked it out and/or whether the book has been returned.
+When a student checks out a book, they find the book they are checking out in a
+large log book containing all the books in the library wherein each book is
+alotted a page. They write their name on the page, along with the current date.
+Upon returning the book, they find the entry in the log book corresponding to
+its checking out and add the date they returned it. If one wishes to find out
+who has a book or, indeed, whether a book is currently in the library (without
+visually searching the shelves), one must read through this log book, find the
+lastest entry regarding the book one wishes to know about and see who checked it
+out and/or whether the book has been returned.
 
 \section{Inefficiencies Arising from the Current System}
+
+Under the current system, students checking a book in or out are required to
+manually search a reasonably large document (the log book) to find the page for
+the book and then write their name and the date. This can take a long time and
+is labourious for the student.
+
+Additionally, there exists no means by which someone can remotely search the
+books in the library to determine which ones are currently being borrowed or
+whether the library has a book at all meaning that if a person wants to know
+these data, they must physically go to the library. Even then, searching is
+completely manual, consisting of finding the right pages in the log book and
+checking whether each entry has a return date. This process is slow and
+inconvenient.
+
+A third issue with the current system is that is a student fails to notice that
+a book has a grey sticker on its spine and proceeds to attempt to record their
+borrowing of it, they may spend a long time searching for the book in the log
+book before realising that that book should not be removed from the library. 
 
 \section{Potential Solutions to Current Inefficiencies}
 
@@ -110,7 +130,7 @@ information one might wish to identify a book by; its author, isbn, subject and
 title. However, each instance of this entity must be unique and so a fifth
 attribute, a UID, is required. The Student entity has attributes name and UID.
 
-\begin{table}[t]
+\begin{table}[h]
 
     \centering
 
@@ -153,7 +173,7 @@ created for every time a Student takes out a Book. This effects a one-to-many
 relationship between Book and BookStudent and a many-to-one relationship between
 BookStudent and Student (see figure 2.3).
 
-\begin{figure}[b]
+\begin{figure}[h]
 
     \centering
 
@@ -181,7 +201,7 @@ BookStudent and Student (see figure 2.3).
 
 \end{figure}
 
-\begin{figure}[t]
+\begin{figure}[h]
 
     \centering
 
@@ -217,8 +237,6 @@ BookStudent and Student (see figure 2.3).
 \end{figure}
 
 \section{User Interface}
-
-\section{Security Measures}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
